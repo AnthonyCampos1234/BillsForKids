@@ -1,9 +1,8 @@
 package view;
 
-import model.Bill;
-
 import java.util.List;
 import java.util.Scanner;
+import model.Bill;
 
 public class BillsForKidsView {
   private Scanner scanner = new Scanner(System.in);
@@ -16,7 +15,8 @@ public class BillsForKidsView {
     System.out.println("4. Spend Money");
     System.out.println("5. Check Finances");
     System.out.println("6. Pass a Day");
-    System.out.println("7. Exit Game");
+    System.out.println("7. Work at Your Job");
+    System.out.println("8. Exit Game");
     System.out.println("What would you like to do?");
   }
 
@@ -58,5 +58,28 @@ public class BillsForKidsView {
 
   public void displayMessage(String message) {
     System.out.println(message);
+  }
+
+  public int getWorkHours() {
+    System.out.print("How many hours would you like to work? ");
+    return scanner.nextInt();
+  }
+
+  public void displayJobEarnings(double earnings) {
+    System.out.printf("You earned $%.2f from your job!\n", earnings);
+  }
+
+  public String getJobName() {
+    System.out.print("Enter the name of your new job: ");
+    return scanner.nextLine();
+  }
+
+  public double getHourlyWage() {
+    System.out.print("Enter your hourly wage: $");
+    return scanner.nextDouble();
+  }
+
+  public void displayJobInfo(String name, double hourlyWage) {
+    System.out.printf("Your job: %s (Hourly wage: $%.2f)\n", name, hourlyWage);
   }
 }

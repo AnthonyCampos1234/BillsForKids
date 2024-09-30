@@ -1,8 +1,11 @@
 package controller;
 import java.util.ArrayList;
 import java.util.List;
-
-import model.*;
+import model.Allowance;
+import model.Bill;
+import model.Job;
+import model.Piggybank;
+import model.Savings;
 import view.BillsForKidsView;
 
 public class BillsForKidsController {
@@ -11,6 +14,7 @@ public class BillsForKidsController {
   private Piggybank piggybank;
   private List<Bill> bills;
   private BillsForKidsView view;
+  private Job job; // Add this line
 
   public BillsForKidsController(BillsForKidsView view) {
     this.view = view;
@@ -18,6 +22,7 @@ public class BillsForKidsController {
     this.savings = new Savings();
     this.piggybank = new Piggybank();
     this.bills = new ArrayList<>();
+    this.job = new Job("Paper Route", 10.0); // default job
     initializeBills();
   }
 
@@ -52,7 +57,10 @@ public class BillsForKidsController {
           passDay();
           break;
         case 7:
-          view.displayMessage("Thanks for plaing BillsForKids! Goodbye!");
+          workJob();
+          break;
+        case 8:
+          view.displayMessage("Thanks for playing BillsForKids! Goodbye!");
           return;
         default:
           view.displayMessage("Invalid choice!");
@@ -111,6 +119,7 @@ public class BillsForKidsController {
   private void checkFinances() {
     view.displayFinances(savings.getBalance(), piggybank.getBalance());
     view.displayBills(bills);
+    view.displayJobInfo(job.getName(), job.getHourlyWage());
   }
 
   private void passDay() {
@@ -120,5 +129,20 @@ public class BillsForKidsController {
     }
     view.displayMessage("A day has passed!");
     view.displayMessage("Days until next allowance: " + allowance.getDaysUntilAllowance());
+  }
+
+  private void workJob() {
+    int hours = view.getWorkHours();
+    job.work(hours);
+    double earnings = job.calculateEarnings();
+    piggybank.deposit(earnings);
+    view.displayJobEarnings(earnings);
+  }
+
+  private void changeJob() {
+    String name = view.getJobName();
+    double wage = view.getHourlyWage();
+    job = new Job(name, wage);
+    view.displayMessage("Your job has been updated!");
   }
 }

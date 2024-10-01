@@ -3,6 +3,18 @@
 ## Overview
 BillsForKids is an interactive Java application designed to teach children basic financial concepts through a gamified experience. This project demonstrates the use of the Model-View-Controller (MVC) architecture and showcases various Java programming concepts.
 
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+  <img src="pics/BFK1" alt="Home Page" width="325" style="margin: 10px;"/>
+  <img src="pics/BFK2" alt="Home Page" width="325" style="margin: 10px;"/>
+  <img src="pics/BFK3" alt="Home Page" width="325" style="margin: 10px;"/>
+  <img src="pics/BFK4" alt="Home Page" width="325" style="margin: 10px;"/>
+  <img src="pics/BFK5" alt="Home Page" width="325" style="margin: 10px;"/>
+  <img src="pics/BFK6" alt="Home Page" width="325" style="margin: 10px;"/>
+  <img src="pics/BFK7" alt="Home Page" width="325" style="margin: 10px;"/>
+  <img src="pics/BFK8" alt="Home Page" width="325" style="margin: 10px;"/>
+  <img src="pics/BFK9" alt="Home Page" width="325" style="margin: 10px;"/>
+</div>
+
 ## Project Structure
 The application is structured using the MVC pattern:
 

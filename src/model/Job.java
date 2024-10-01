@@ -10,7 +10,7 @@ public class Job {
         this.hourlyWage = hourlyWage;
         this.hoursWorked = 0;
     }
-    
+
     public void work(int hours) {
         this.hoursWorked += hours;
     }
@@ -18,15 +18,15 @@ public class Job {
     public double calculateEarnings() {
         return hoursWorked * hourlyWage;
     }
-    
+
     public String getName() {
         return name;
     }
-    
+
     public double getHourlyWage() {
         return hourlyWage;
     }
-    
+
     public int getHoursWorked() {
         return hoursWorked;
     }

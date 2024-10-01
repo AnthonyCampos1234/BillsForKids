@@ -23,7 +23,7 @@ public class BillsForKidsView extends JFrame {
 	private Color textColor = new Color(70, 70, 70);
 
 	public BillsForKidsView() {
-		setTitle("Money Mania: Your Fun Finance Adventure!");
+		setTitle("BillsForKids: Your Fun Finance Adventure!");
 		setSize(900, 700);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

@@ -1,7 +1,7 @@
 # BillsForKids: A Fun Financial Education Game
 
 ## Overview
-BillsForKids is an interactive Java application designed to teach children basic financial concepts through a gamified experience. This project demonstrates the use of the Model-View-Controller (MVC) architecture and showcases various Java programming concepts.
+BillsForKids is an interactive Java application designed to teach children basic financial concepts through a gamified experience. This project demonstrates the use of the Model-View-Controller (MVC) architecture and showcases various Java programming concepts. This was made to demostrate a few of my java skills learnt from school courses as the projects we did in class need a special request to be shown as they can not be placed into public repositories.
 
 <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
   <img src="pics/BFK1.png" alt="Home Page" width="325" style="margin: 10px;"/>
